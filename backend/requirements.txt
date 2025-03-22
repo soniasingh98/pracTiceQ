@@ -1,4 +1,4 @@
-typing
+
 python-dotenv
 langchain-groq
 langchain
