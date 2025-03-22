@@ -59,7 +59,7 @@ export default function Home() {
     };
 
     try {
-      const response = await fetch("http://localhost:8000/get_questions", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT}`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
