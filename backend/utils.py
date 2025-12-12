@@ -2,8 +2,8 @@ import os
 from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from typing import List
-from langchain.prompts import PromptTemplate
-from langchain.output_parsers import PydanticOutputParser
+from langchain_core.prompts import PromptTemplate
+from langchain_core.output_parsers import PydanticOutputParser
 from pydantic import BaseModel, Field, field_validator
 from fastapi import HTTPException
 
