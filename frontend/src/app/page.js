@@ -126,7 +126,7 @@ export default function Home() {
               <p className="text-gray-600">✅Covers Diverse Tech Topics.</p>
             </div>
 
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 text-gray-600">
               <h2 className="text-lg font-semibold mb-4">
                 Select Quiz Options
               </h2>
@@ -135,7 +135,7 @@ export default function Home() {
               <select
                 value={topic}
                 onChange={(e) => setTopic(e.target.value)}
-                className="border p-3 rounded w-full mb-3"
+                className="border p-3 rounded w-full mb-3 bg-white"
               >
                 {topics.map((t, index) => (
                   <option key={index} value={t}>
@@ -150,7 +150,7 @@ export default function Home() {
                   placeholder="Enter custom topic"
                   value={customTopic}
                   onChange={(e) => setCustomTopic(e.target.value)}
-                  className="border p-3 rounded w-full mb-3"
+                  className="border p-3 rounded w-full mb-3 bg-white"
                 />
               )}
 
@@ -158,7 +158,7 @@ export default function Home() {
               <select
                 value={questionType}
                 onChange={(e) => setQuestionType(e.target.value)}
-                className="border p-3 rounded w-full mb-3"
+                className="border p-3 rounded w-full mb-3 bg-white"
               >
                 <option value="Fill in the blanks">Fill in the Blanks</option>
                 <option value="Multiple Choice">Multiple Choice</option>
@@ -168,7 +168,7 @@ export default function Home() {
               <select
                 value={difficulty}
                 onChange={(e) => setDifficulty(e.target.value)}
-                className="border p-3 rounded w-full mb-3"
+                className="border p-3 rounded w-full mb-3 bg-white"
               >
                 <option value="easy">Easy</option>
                 <option value="medium">Medium</option>
@@ -180,7 +180,7 @@ export default function Home() {
                 type="number"
                 value={numQuestions}
                 onChange={(e) => setNumQuestions(e.target.value)}
-                className="border p-3 rounded w-full mb-4"
+                className="border p-3 rounded w-full mb-4 bg-white"
               />
 
               <button
@@ -196,7 +196,7 @@ export default function Home() {
       )}
 
       {questions.length > 0 && (
-        <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-4xl mt-5">
+        <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-4xl mt-5 text-gray-600">
           {questions.map((q, index) => (
             <div key={index} className="mb-4">
               <p className="text-lg font-medium mb-2">{q.question}</p>
@@ -219,7 +219,7 @@ export default function Home() {
                 ) : (
                   <input
                     type="text"
-                    className="border p-3 rounded w-full"
+                    className="border p-3 rounded w-full bg-white"
                     onChange={(e) => handleChange(index, e.target.value)}
                   />
                 )
